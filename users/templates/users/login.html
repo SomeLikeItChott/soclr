@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="columns is-centered">
+	<div class="column is-one-third">
+		<div class="section">
+			<form action="{% url 'users:login' %}" method="post">
+				{% csrf_token %}
+				{{ form | crispy }}
+				<br>
+				<input class="button is-primary is-pulled-right" type="submit" value="Submit" />
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ user.username }}'s profile | Soclr{% endblock %}
+
+{% block content %}
+<div class="columns is-centered">
+	<div class="column is-one-third">
+		<div class="section">
+			{{ user.username }}
+		</div>
+	</div>
+</div>
+{% endblock %}

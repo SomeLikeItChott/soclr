@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Soclr{% endblock %}
+
+{% block content %}
+<section class="hero is-medium is-primary is-bold">
+	<div class="hero-body">
+		<div class="container has-text-centered">
+			<h1 class="title">
+				Soclr
+			</h1>
+			<h2 class="subtitle">
+				The generic, extendable, feed-based social network
+			</h2>
+			<a href="{% url 'users:register' %}" class="button is-inverted">Register</a>
+			<a href="{% url 'users:login' %}" class="button is-primary is-inverted is-outlined">Login</a>
+
+		</div>
+	</div>
+</section>
+<br>
+<div class="section">
+	<div class="columns">
+		<div class="column has-text-centered">
+			<div class="title">Generic</div>
+			<div class="subtitle">Soclr is a barebones social network, designed to be built on.</div>
+		</div>
+		<div class="column has-text-centered">
+			<div class="title">Extendable</div>
+			<div class="subtitle">Built on Django and Bulma, Soclr is simple to understand and easy to modify.</div>
+		</div>
+		<div class="column has-text-centered">
+			<div class="title">Feed-based</div>
+			<div class="subtitle">Your feed is a chronological list of <em>everything</em> posted by those you follow. No algorithmic sorting, no search bubble, no bull.</div>
+		</div>
+	</div>
+</div>
+<br>
+{% endblock content %}
